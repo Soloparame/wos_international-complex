@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import { Handshake, LandPlot, FileCheck2, Building2, ArrowRight } from 'lucide-react';
+import { facilitiesData } from '../data/facilitiesData';
+import { getFacilityImage } from '../utils/facilityImages';
 
 export default function SupportWOS() {
   return (
@@ -21,11 +24,11 @@ export default function SupportWOS() {
                 Support WOS International
               </p>
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-5">
-                Join us to build WOS International Medical Complex
+                Choose Your Investment Impact at WOS International
               </h1>
               <p className="text-white/90 text-lg leading-relaxed mb-8">
-                We invite investors, Ethiopian diaspora, donors, business owners, and institutional partners to help bring this medical city to life.
-                This is a long-term, high-impact project designed to transform healthcare and medical innovation in Ethiopia.
+                Invest in one priority department or support the entire WOS International Medical Complex.
+                Your partnership helps us deliver world-class healthcare, education, and innovation for Ethiopia and the region.
               </p>
               <div className="flex flex-wrap gap-3">
                 {['Investors', 'Diaspora', 'Donors', 'Business Owners', 'NGOs', 'Foundations'].map((item) => (
@@ -75,23 +78,12 @@ export default function SupportWOS() {
         </div>
 
         <div className="max-w-7xl mx-auto mt-10 rounded-3xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm">
-          <h3 className="font-serif text-3xl md:text-4xl font-bold text-teal-950 mb-4">Request the Master Plan and Partnership Brief</h3>
+          <h3 className="font-serif text-3xl md:text-4xl font-bold text-teal-950 mb-4">Select How You Want to Invest</h3>
           <p className="text-slate-600 text-lg leading-relaxed max-w-4xl mb-8">
-            Contact the administration to review the master plan in detail, discuss collaboration models, and explore how your support can help accelerate project delivery.
+            Choose one of the 24 sectors and open its detail page to continue your investment process.
+            For full-complex investment, open any sector and proceed using the databank button.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a
-              href="mailto:admin@wos-medical.com?subject=WOS%20Partnership%20and%20Master%20Plan%20Request"
-              className="inline-flex items-center justify-center bg-teal-600 text-white px-7 py-3 rounded-full font-bold hover:bg-teal-700 transition-colors"
-            >
-              Contact Admin
-            </a>
-            <a
-              href="tel:+251911000000"
-              className="inline-flex items-center justify-center bg-white text-teal-800 border border-teal-200 px-7 py-3 rounded-full font-bold hover:bg-teal-50 transition-colors"
-            >
-              Call Admin Office
-            </a>
             <a
               href="/facilities"
               className="inline-flex items-center justify-center text-teal-700 font-bold px-3 py-3 hover:text-teal-800 transition-colors"
@@ -99,6 +91,62 @@ export default function SupportWOS() {
               Explore Project Sectors <ArrowRight className="w-4 h-4 ml-2" />
             </a>
           </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto mt-8 rounded-3xl border border-slate-200 bg-white p-8 md:p-10 shadow-sm">
+          <h3 className="font-serif text-3xl md:text-4xl font-bold text-teal-950 mb-4">Choose a Sector to Invest In</h3>
+          <p className="text-slate-600 text-lg leading-relaxed max-w-4xl mb-8">
+            Select one of the 24 sectors below and continue to its detail page to invest on this.
+          </p>
+
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {facilitiesData.map((facility, index) => (
+              <motion.div
+                layout
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: Math.min(index * 0.03, 0.35) }}
+                key={facility.id}
+              >
+                <Link
+                  to={`/facility/${facility.id}`}
+                  className="group block h-full rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-2xl hover:shadow-teal-900/10 hover:-translate-y-2 hover:border-teal-300 transition-all duration-500 relative overflow-hidden"
+                >
+                  <div className="relative h-36 overflow-hidden">
+                    <img
+                      src={getFacilityImage(facility)}
+                      alt={facility.name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/15 to-transparent" />
+                    <span className="absolute top-4 right-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white bg-black/30 px-2.5 py-1 rounded-full border border-white/30">
+                      Sector {facility.sector}
+                    </span>
+                  </div>
+
+                  <div className="p-7">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-emerald-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+
+                    <div className="flex items-center justify-between gap-4 mb-4">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 group-hover:text-teal-600 transition-colors bg-slate-50 px-2.5 py-1 rounded-full border border-slate-100 group-hover:border-teal-200 group-hover:bg-teal-50">
+                        {facility.category}
+                      </span>
+                    </div>
+
+                    <h4 className="text-xl font-bold text-teal-950 mb-2 group-hover:text-teal-700 transition-colors leading-snug font-serif">
+                      {facility.name}
+                    </h4>
+                    <p className="text-sm text-slate-500 mb-6 leading-relaxed line-clamp-2">{facility.description}</p>
+
+                    <div className="inline-flex items-center text-teal-700 font-bold group-hover:text-teal-800 transition-colors">
+                      Invest on This Sector <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

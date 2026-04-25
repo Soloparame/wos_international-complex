@@ -227,15 +227,21 @@ export default function FacilityDetail() {
                 </dl>
                 
                 <div className="space-y-4">
-                  <button className="w-full relative group overflow-hidden bg-teal-600 text-white py-4 rounded-xl font-bold hover:bg-teal-700 transition-colors shadow-lg shadow-teal-600/25">
+                  <Link
+                    to={`/investor-databank?facility=${facility.id}`}
+                    className="w-full relative group overflow-hidden bg-teal-600 text-white py-4 rounded-xl font-bold hover:bg-teal-700 transition-colors shadow-lg shadow-teal-600/25 inline-flex items-center justify-center"
+                  >
                     <span className="relative z-10 flex items-center justify-center gap-2">
-                      Access Databank <ExternalLink className="w-4 h-4" />
+                      Invest on This <ExternalLink className="w-4 h-4" />
                     </span>
                     <div className="absolute inset-0 h-full w-full bg-white/20 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
-                  </button>
-                  <button className="w-full bg-slate-50 text-slate-700 border border-slate-200 py-4 rounded-xl font-bold hover:bg-white hover:border-slate-300 transition-colors shadow-sm">
+                  </Link>
+                  <Link
+                    to={`/schedule-delegation-tour?facility=${facility.id}`}
+                    className="w-full bg-slate-50 text-slate-700 border border-slate-200 py-4 rounded-xl font-bold hover:bg-white hover:border-slate-300 transition-colors shadow-sm inline-flex items-center justify-center"
+                  >
                     Schedule Delegation Tour
-                  </button>
+                  </Link>
                 </div>
               </motion.div>
             </aside>

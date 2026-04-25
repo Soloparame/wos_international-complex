@@ -11,6 +11,8 @@ import FacilityDetail from './src/pages/FacilityDetail.tsx';
 import About from './src/pages/About.tsx';
 import Emergency from './src/pages/Emergency.tsx';
 import SupportWOS from './src/pages/SupportWOS.tsx';
+import InvestorDatabank from './src/pages/InvestorDatabank.tsx';
+import ScheduleDelegationTour from './src/pages/ScheduleDelegationTour.tsx';
 import NotFound from './src/pages/NotFound.tsx';
 
 const ScrollToTopOnRouteChange: React.FC = () => {
@@ -35,6 +37,8 @@ const App: React.FC = () => {
             <Route path="/facility/:id" element={<FacilityDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/support-wos" element={<SupportWOS />} />
+            <Route path="/investor-databank" element={<InvestorDatabank />} />
+            <Route path="/schedule-delegation-tour" element={<ScheduleDelegationTour />} />
             <Route path="/emergency" element={<Emergency />} />
             <Route path="/Emergency" element={<Emergency />} />
             <Route path="/emergency-care" element={<Emergency />} />
