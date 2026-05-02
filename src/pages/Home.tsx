@@ -27,7 +27,7 @@ export default function Home() {
                 Pioneering Holistic Healthcare and Global Research
               </h2>
               <p className="text-slate-600 leading-relaxed max-w-xl mb-8">
-                WOS International Medical Complex is a premier healthcare ecosystem. We combine advanced laboratories,
+                WOS Medical Complex is a premier healthcare ecosystem. We combine advanced laboratories,
                 comprehensive patient care from pharmacy to oncology, and integrated living to ensure absolute excellence in
                 medical innovation.
               </p>
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-8 drop-shadow-md">
-                Experience WOS Complex
+                Experience WOS Medical Complex
               </h2>
               <p className="text-teal-100 text-lg mb-12 font-light">
                 Schedule a private tour or consult with our administration.

@@ -126,7 +126,7 @@ const NotFound: React.FC = () => {
         {/* Footer */}
         <div className="mt-16">
           <p className="text-sm text-gray-600">
-            © {new Date().getFullYear()} WOS International Medical Complex
+            © {new Date().getFullYear()} WOS Medical Complex
           </p>
         </div>
       </div>

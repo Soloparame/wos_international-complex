@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Hexagon, PhoneCall } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
+import { WOS_LOGO_SRC, WOS_SITE_NAME } from '../constants/branding';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,15 +28,23 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-md py-4 border-b border-slate-100 shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group min-w-0">
-          <div className={`p-2.5 rounded-xl shadow-sm transition-all shrink-0 ${isTransparentHeroMode ? 'bg-white/20 border border-white/35 group-hover:bg-white/30' : 'bg-teal-50 border border-teal-100 group-hover:bg-teal-100'}`}>
-            <Hexagon className={`w-6 h-6 group-hover:scale-110 transition-transform ${isTransparentHeroMode ? 'text-white' : 'text-teal-600'}`} />
+          <div
+            className={`p-1.5 rounded-xl shadow-sm transition-all shrink-0 ring-1 ${isTransparentHeroMode ? 'bg-white/15 ring-white/35 group-hover:bg-white/25' : 'bg-white ring-teal-100 group-hover:ring-teal-200'}`}
+          >
+            <img
+              src={WOS_LOGO_SRC}
+              alt={WOS_SITE_NAME}
+              className="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-lg"
+              width={44}
+              height={44}
+            />
           </div>
           <div className="flex flex-col leading-tight min-w-0">
             <span className={`font-serif font-bold text-sm sm:text-lg tracking-wide truncate ${isTransparentHeroMode ? 'text-white drop-shadow-md' : 'text-teal-950'}`}>
-              WOS MEDICAL
+              WOS Medical
             </span>
             <span className={`font-sans font-bold text-[10px] sm:text-xs tracking-[0.2em] uppercase ${isTransparentHeroMode ? 'text-teal-100 drop-shadow-md' : 'text-teal-600'}`}>
-              International Complex
+              Complex
             </span>
           </div>
         </Link>

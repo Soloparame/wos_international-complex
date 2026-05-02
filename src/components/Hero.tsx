@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <motion.img
           src="/hero-3d-city.png"
-          alt="WOS International Medical Complex"
+          alt="WOS Medical Complex"
           className="w-full h-full object-cover"
           style={{
             x: springX,
@@ -74,7 +74,7 @@ const Hero = () => {
           className="flex flex-col items-center"
         >
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 text-white text-xs font-bold uppercase tracking-widest mb-6 shadow-md">
-            <span>WOS International Medical Complex</span>
+            <span>WOS Medical Complex</span>
           </div>
           
           <h1 className="font-serif text-4xl sm:text-5xl border-transparent font-bold text-white leading-[1.2] mb-4 drop-shadow-[0_6px_18px_rgba(0,0,0,0.5)]">

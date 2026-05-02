@@ -37,7 +37,7 @@ export default function Facilities() {
               Every building, one medical city
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed border-l-4 border-teal-300 pl-6">
-              Browse all specialized sectors of WOS International Medical Complex — from flagship hospitals and research
+              Browse all specialized sectors of WOS Medical Complex — from flagship hospitals and research
               labs to residences, hospitality, and campus operations.
             </p>
           </motion.div>

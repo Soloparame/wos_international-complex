@@ -24,7 +24,7 @@ export default function FacilityDetail() {
 
   useEffect(() => {
     if (facility) {
-      document.title = `${facility.name} | WOS International Medical Complex`;
+      document.title = `${facility.name} | WOS Medical Complex`;
     }
   }, [facility]);
 

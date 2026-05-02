@@ -1,5 +1,6 @@
 import React from 'react';
-import { Hexagon, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { WOS_LOGO_SRC, WOS_SITE_NAME } from '../constants/branding';
 
 const Footer = () => {
   return (
@@ -8,16 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3 group min-w-0">
-              <div className="bg-teal-800 border border-teal-700 p-2.5 rounded-xl shadow-lg group-hover:bg-teal-700 transition-all shrink-0">
-                <Hexagon className="text-teal-100 w-6 h-6 group-hover:scale-110 transition-transform" />
+              <div className="bg-teal-900/80 border border-teal-600/50 p-1.5 rounded-xl shadow-lg group-hover:bg-teal-800 transition-all shrink-0">
+                <img src={WOS_LOGO_SRC} alt={WOS_SITE_NAME} className="w-10 h-10 sm:w-11 sm:h-11 object-contain rounded-lg" width={44} height={44} />
               </div>
               <div className="flex flex-col leading-tight min-w-0">
-                <span className="font-serif font-bold text-white text-sm sm:text-lg tracking-wide truncate">
-                  WOS MEDICAL
-                </span>
-                <span className="font-sans font-bold text-teal-300 text-[10px] sm:text-xs tracking-[0.2em] uppercase">
-                  International Complex
-                </span>
+                <span className="font-serif font-bold text-white text-sm sm:text-lg tracking-wide truncate">WOS Medical</span>
+                <span className="font-sans font-bold text-teal-300 text-[10px] sm:text-xs tracking-[0.2em] uppercase">Complex</span>
               </div>
             </div>
             <p className="text-sm leading-relaxed font-light text-teal-100/80">
@@ -56,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-4 text-sm font-medium text-teal-100/90">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-teal-400 shrink-0" />
-                <span>WOS International Medical Complex, Medical District</span>
+                <span>WOS Medical Complex, Medical District</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-teal-400 shrink-0" />
@@ -71,7 +68,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-teal-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-semibold text-teal-200/60">
-          <p>© 2026 WOS International Medical Complex. All systems nominal.</p>
+          <p>© 2026 WOS Medical Complex. All systems nominal.</p>
           <div className="flex gap-8">
             <a href="#" className="hover:text-white transition-colors">Data Privacy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Use</a>

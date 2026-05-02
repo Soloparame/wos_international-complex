@@ -46,7 +46,7 @@ const FacilityGrid = () => {
             Twenty-four sectors, one network
           </h2>
           <p className="text-slate-600 text-lg leading-relaxed font-light">
-            Explore every building block of WOS International Medical Complex — medical, academic, residential,
+            Explore every building block of WOS Medical Complex — medical, academic, residential,
             commercial, and operations — completely interconnected for advanced patient care.
           </p>
         </div>

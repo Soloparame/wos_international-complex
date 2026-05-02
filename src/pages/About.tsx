@@ -23,7 +23,7 @@ export default function About() {
                   One campus. Full-spectrum healthcare.
                 </h1>
                 <p className="text-white/85 text-lg leading-relaxed mb-8">
-                  WOS International Medical Complex is a master-planned medical city designed to integrate treatment, research, education, and residential life in one connected ecosystem.
+                  WOS Medical Complex is a master-planned medical city designed to integrate treatment, research, education, and residential life in one connected ecosystem.
                 </p>
                 <Link to="/facilities" className="inline-flex items-center gap-2 bg-white text-teal-900 px-6 py-3 rounded-full font-bold hover:bg-teal-50 transition-colors">
                   Explore all sectors <ArrowRight className="w-4 h-4" />
